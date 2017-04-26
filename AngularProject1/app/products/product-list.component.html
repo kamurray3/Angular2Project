@@ -1,0 +1,38 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+    <div class='panel-body'>
+            <table class='table'
+                   *ngIf='products && products.length'>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <!--<th>ItemStyleNum</th>-->
+                        <th>ProductName</th>
+                        <th>ProductDescription</th>
+                        <th>ProductPrice</th>
+                        <th>ProductCategoryCode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let product of products'>
+                        <td>
+                            <img src='./app/assets/images/{{product.ImageFile}}'
+                                    width='100px'
+                                    height='100px'>
+                        </td>
+                        <!--<td>{{ product.ItemStyleNum }}</td>-->
+                        <td>
+                            <a [routerLink]="['/product' , product.ItemStyleNum]">
+                            {{product.ProductName}}
+                            </a>
+                        </td>
+                        <td>{{ product.ProductDescription }}</td>
+                        <td>{{ product.ProductPrice | currency:'USD':true }}</td>
+                        <td>{{ product.ProductCategoryCode }}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>

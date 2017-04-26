@@ -1,0 +1,22 @@
+[
+        {
+                "CatCode": 1,
+                "CatName": "Accessories"
+            },
+            {
+                "CatCode": 2,
+                "CatName": "Bottoms"
+            },
+            {
+                "CatCode": 3,
+                "CatName": "Shoes"
+            },
+            {
+                "CatCode": 4,
+                "CatName": "Socks"
+            },
+            {
+                "CatCode": 5,
+                "CatName": "Tops"
+        }
+]

@@ -1,0 +1,30 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+    <div class='panel-body'>
+
+        <div class='table-responsive'>
+            <table class='table'
+                   *ngIf='categories && categories.length'>
+                <thead>
+                    <tr>
+                        <th>Category Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let category of categories'>
+                        <td>
+                            <a [routerLink]="['/products',category.CatCode]" >
+                                {{ category.CatName }}
+                            </a>                 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class='panel-footer'>
+        Bootswatch Theme:  <i>Solar</i>
+    </div>
+</div>

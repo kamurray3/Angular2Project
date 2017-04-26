@@ -1,0 +1,45 @@
+<div class='panel panel-primary' *ngIf='product'>
+    <div class='panel-heading'>
+       <h2 class="text-default"> "{{ product.ProductName}}"</h2>
+    </div>
+
+    <div class='panel-body'>
+        <div class='row'>
+        
+                <div class='row'>
+                    <div class='col-md-2'></div>
+                    <div class='col-md-10'>
+                        <img class='img-responsive'
+                             src='./app/assets/images/{{product.ImageFile}}'                                          
+                             [style.width.px]='200'
+                             [style.margin-bottom.px]='10' 
+                             [title]='product.ProductName'>
+                    </div>
+                </div>
+                                
+                <div class='row'>
+                    <div class='col-md-2'>ProductName:</div>
+                    <div class='col-md-10'>{{product.ProductName}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-2'>ProductCategoryCode:</div>
+                    <div class='col-md-10'>{{product.ProductCategoryCode}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-2'>ProductDescription:</div>
+                    <div class='col-md-10'>{{product.ProductDescription}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-2'>ProductPrice:</div>
+                    <div class='col-md-10'>{{product.ProductPrice | currency:'USD':true}}</div>
+                </div>
+
+        </div>
+    </div>
+
+    <!--<div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+    </div>-->
+</div>
